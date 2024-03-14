@@ -5,10 +5,7 @@ import jdk.jfr.Description;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.Matchers.hasKey;
 import static org.hamcrest.Matchers.is;
 
 
@@ -82,12 +79,6 @@ public class CourierLoginTest {
     @Step("Login courier")
     public Response courierLogin(LoginCourier loginCourier){
         Response response = courierAPI.loginCourierAPI(loginCourier);
-        return response;
-    }
- // Шаг "создать курьера"
-    @Step("Create courier")
-    public Response courierCreate(CreateCourier createCourier){
-        Response response = courierAPI.createNewCourierAPI(createCourier);
         return response;
     }
 
